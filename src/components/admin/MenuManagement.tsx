@@ -485,7 +485,7 @@ export default function MenuManagement() {
                   {imagePreview && (
                     <div className="relative">
                       <ImageWithFallback
-                        src={imagePreview}
+                        src={`${import.meta.env.BASE_URL}${imagePreview}`}
                         alt="Preview"
                         className="w-full h-48 object-cover rounded-md"
                       />
