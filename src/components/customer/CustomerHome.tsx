@@ -42,7 +42,9 @@ export default function CustomerHome({ onNavigateToMenu }: CustomerHomeProps) {
             <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full mb-4">
               <Clock className="w-6 h-6 text-orange-600 dark:text-orange-400" />
             </div>
-            <h3 className="text-gray-900 dark:text-white mb-2">Fast Delivery</h3>
+            <h3 className="text-gray-900 dark:text-white mb-2">
+              Fast Delivery
+            </h3>
             <p className="text-gray-600 dark:text-gray-400">
               Get your food delivered in 30 minutes or less
             </p>
@@ -60,7 +62,9 @@ export default function CustomerHome({ onNavigateToMenu }: CustomerHomeProps) {
             <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full mb-4">
               <TrendingUp className="w-6 h-6 text-orange-600 dark:text-orange-400" />
             </div>
-            <h3 className="text-gray-900 dark:text-white mb-2">Easy Ordering</h3>
+            <h3 className="text-gray-900 dark:text-white mb-2">
+              Easy Ordering
+            </h3>
             <p className="text-gray-600 dark:text-gray-400">
               Simple and secure online ordering process
             </p>
@@ -69,7 +73,9 @@ export default function CustomerHome({ onNavigateToMenu }: CustomerHomeProps) {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-gray-900 dark:text-white mb-6">Browse by Category</h2>
+        <h2 className="text-gray-900 dark:text-white mb-6">
+          Browse by Category
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {categories.map((category) => (
             <button
@@ -104,7 +110,7 @@ export default function CustomerHome({ onNavigateToMenu }: CustomerHomeProps) {
               onClick={onNavigateToMenu}
             >
               <ImageWithFallback
-                src={item.image}
+                src={`${import.meta.env.BASE_URL}${item.image}`}
                 alt={item.name}
                 className="w-full h-48 object-cover"
               />

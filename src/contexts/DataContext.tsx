@@ -46,7 +46,7 @@ const defaultMenuItems: MenuItem[] = [
     description: "Classic pizza with tomato sauce, mozzarella, and fresh basil",
     price: 250,
     category: "Pizza",
-    image: "/images/margherita.jpg",
+    image: "images/margherita.jpg",
     available: true,
   },
   {
@@ -55,7 +55,7 @@ const defaultMenuItems: MenuItem[] = [
     description: "Traditional pizza topped with pepperoni and cheese",
     price: 300,
     category: "Pizza",
-    image: "/images/pepperoni.jpg",
+    image: "images/pepperoni.jpg",
     available: true,
   },
   {
@@ -65,7 +65,7 @@ const defaultMenuItems: MenuItem[] = [
       "Juicy beef patty with cheese, lettuce, tomato, and special sauce",
     price: 150,
     category: "Burgers",
-    image: "/images/cheese burger.jpg",
+    image: "images/cheese burger.jpg",
     available: true,
   },
   {
@@ -74,7 +74,7 @@ const defaultMenuItems: MenuItem[] = [
     description: "Grilled chicken breast with mayo, lettuce, and tomato",
     price: 150,
     category: "Burgers",
-    image: "/images/chicken burger.jpg",
+    image: "images/chicken burger.jpg",
     available: true,
   },
   {
@@ -83,7 +83,7 @@ const defaultMenuItems: MenuItem[] = [
     description: "Fresh romaine lettuce with Caesar dressing and croutons",
     price: 50,
     category: "Salads",
-    image: "/images/caesar salad.jpg",
+    image: "images/caesar salad.jpg",
     available: true,
   },
   {
@@ -92,7 +92,7 @@ const defaultMenuItems: MenuItem[] = [
     description: "Mixed greens with feta cheese, olives, and Greek dressing",
     price: 80,
     category: "Salads",
-    image: "/images/greek salad.jpg",
+    image: "images/greek salad.jpg",
     available: true,
   },
   {
@@ -101,7 +101,7 @@ const defaultMenuItems: MenuItem[] = [
     description: "Creamy pasta with bacon, egg, and parmesan cheese",
     price: 150,
     category: "Pasta",
-    image: "/images/carbonara.jpg",
+    image: "images/carbonara.jpg",
     available: true,
   },
   {
@@ -111,7 +111,7 @@ const defaultMenuItems: MenuItem[] = [
       "Fettuccine pasta with grilled chicken in creamy alfredo sauce",
     price: 180,
     category: "Pasta",
-    image: "/images/alfredo.jpg",
+    image: "images/alfredo.jpg",
     available: true,
   },
   {
@@ -120,7 +120,7 @@ const defaultMenuItems: MenuItem[] = [
     description: "Rich chocolate cake with chocolate frosting",
     price: 80,
     category: "Desserts",
-    image: "/images/chocolate cake.jpg",
+    image: "images/chocolate cake.jpg",
     available: true,
   },
   {
@@ -129,7 +129,7 @@ const defaultMenuItems: MenuItem[] = [
     description: "Classic Italian dessert with coffee-soaked ladyfingers",
     price: 70,
     category: "Desserts",
-    image: "/images/tiramisu.jpg",
+    image: "images/tiramisu.jpg",
     available: true,
   },
   {
@@ -138,7 +138,7 @@ const defaultMenuItems: MenuItem[] = [
     description: "Freshly squeezed orange juice",
     price: 35,
     category: "Beverages",
-    image: "/images/orange juice.jpg",
+    image: "images/orange juice.jpg",
     available: true,
   },
   {
@@ -147,7 +147,7 @@ const defaultMenuItems: MenuItem[] = [
     description: "Cold brewed coffee served over ice",
     price: 40,
     category: "Beverages",
-    image: "/images/iced coffee.jpg",
+    image: "images/iced coffee.jpg",
     available: true,
   },
 ];

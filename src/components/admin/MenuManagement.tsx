@@ -275,7 +275,7 @@ export default function MenuManagement() {
               className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
             >
               <ImageWithFallback
-                src={item.image}
+                src={`${import.meta.env.BASE_URL}${item.image}`}
                 alt={item.name}
                 className="w-full h-48 object-cover"
               />

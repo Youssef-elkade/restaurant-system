@@ -58,7 +58,7 @@ export default function Cart({ onCheckout }: CartProps) {
                 className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 flex gap-4"
               >
                 <ImageWithFallback
-                  src={menuItem.image}
+                  src={`${import.meta.env.BASE_URL}${menuItem.image}`}
                   alt={menuItem.name}
                   className="w-24 h-24 object-cover rounded-md"
                 />
