@@ -8,11 +8,19 @@ interface CustomerHomeProps {
   onNavigateToMenu: () => void;
 }
 
+const resolveImageSrc = (image: string) => {
+  if (!image) return "";
+  if (image.startsWith("data:") || image.startsWith("http")) return image;
+  return `${import.meta.env.BASE_URL}${image}`;
+};
+
 export default function CustomerHome({ onNavigateToMenu }: CustomerHomeProps) {
   const { user } = useAuth();
   const { menuItems } = useData();
 
-  const categories = Array.from(new Set(menuItems.map((item) => item.category)));
+  const categories = Array.from(
+    new Set(menuItems.map((item) => item.category))
+  );
   const featuredItems = menuItems.slice(0, 4);
 
   return (
@@ -110,7 +118,7 @@ export default function CustomerHome({ onNavigateToMenu }: CustomerHomeProps) {
               onClick={onNavigateToMenu}
             >
               <ImageWithFallback
-                src={`${import.meta.env.BASE_URL}${item.image}`}
+                src={resolveImageSrc(item.image)}
                 alt={item.name}
                 className="w-full h-48 object-cover"
               />

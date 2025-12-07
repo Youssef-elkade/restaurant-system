@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import { useData } from "../../contexts/DataContext";
 import { useCart } from "../../contexts/CartContext";
 import { Search, Plus, Check } from "lucide-react";
-import { toast } from "sonner";
-import { Toaster } from "sonner";
+import { toast, Toaster } from "sonner";
+
+const resolveImageSrc = (image: string) => {
+  if (!image) return "";
+  if (image.startsWith("data:") || image.startsWith("http")) return image;
+  return `${import.meta.env.BASE_URL}${image}`;
+};
 
 export default function Menu() {
   const { menuItems } = useData();
@@ -100,7 +105,7 @@ export default function Menu() {
               className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
             >
               <img
-                src={`${import.meta.env.BASE_URL}${item.image}`}
+                src={resolveImageSrc(item.image)}
                 alt={item.name}
                 className="w-full h-48 object-cover"
               />

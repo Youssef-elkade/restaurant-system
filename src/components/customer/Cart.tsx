@@ -7,6 +7,12 @@ interface CartProps {
   onCheckout: () => void;
 }
 
+const resolveImageSrc = (image: string) => {
+  if (!image) return "";
+  if (image.startsWith("data:") || image.startsWith("http")) return image;
+  return `${import.meta.env.BASE_URL}${image}`;
+};
+
 export default function Cart({ onCheckout }: CartProps) {
   const { cartItems, removeFromCart, updateQuantity, getCartTotal, clearCart } =
     useCart();
@@ -58,7 +64,7 @@ export default function Cart({ onCheckout }: CartProps) {
                 className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 flex gap-4"
               >
                 <ImageWithFallback
-                  src={`${import.meta.env.BASE_URL}${menuItem.image}`}
+                  src={resolveImageSrc(menuItem.image)}
                   alt={menuItem.name}
                   className="w-24 h-24 object-cover rounded-md"
                 />
